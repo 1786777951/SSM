@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="cn.black.book.dao.BookDao">  
+	<!-- 查询所有书 -->
+	<select id="findBooks" resultType="cn.black.book.entity.Book" >
+		select * from book
+	</select>
+	
+	<!-- 查询今天更新的书籍 -->
+	<select id="updateDay" resultType="cn.black.book.entity.Book" >
+		select * from book where TO_DAYS(str_to_date(book_update_time, '%Y-%m-%d %H')) = TO_DAYS(NOW())
+	</select>
+
+	<!-- 查询一本书 -->
+	<select id="findBookById" resultType="cn.black.book.entity.Book" >
+		select * from book where book_id=#{book_id}
+	</select>
+	
+	<!-- 查询一本书 -->
+	<select id="findBookByIds" resultType="cn.black.book.entity.Book" >
+		select * from book where book_id=#{book_id}
+	</select>
+	
+	<!-- 查询书类型数据 -->
+	<select id="findGROUPBY" resultMap="BaseResultMap" >
+		SELECT book_type,Count(*) as count FROM book GROUP BY book_type
+	</select>
+	<resultMap id="BaseResultMap" type="Map">
+       <result property="book_type" column="book_type"/>
+       <result property="count" column="count"/>
+    </resultMap>
+
+	
+	
+	<!-- 通过分类来查找书 -->
+	<select id="findBook" parameterType="java.lang.Integer" resultType="cn.black.book.entity.Book" >
+		select * from book limit #{start},#{end}
+	</select>
+	
+	<!-- 查询类型书分页 -->
+	<select id="findBookByType" resultType="cn.black.book.entity.Book" >
+		select * from book where book_type like concat('%',#{book_type},'%') limit #{start},#{limit}
+	</select>
+	
+	<!-- 根据书名、类型、内容、作者查询 -->
+	<select id="findBookByTitle" resultType="cn.black.book.entity.Book" >
+		select * from book where (book_title like concat('%',#{book_title},'%') 
+							  or  book_explain like concat('%',#{book_title},'%')
+							  or  book_type like concat('%',#{book_title},'%')
+							  or  book_author like concat('%',#{book_title},'%'))
+							  and book_count between #{wordCount} and #{wordCounts}
+							  <if test='record != null and record == 3'>
+							  and ((TO_DAYS(NOW())-TO_DAYS(str_to_date(book_update_time,'%Y-%m-%d %H'))) &lt;= 3)
+							  </if>
+							  <if test='record != null and record == 7'>
+							  and ((TO_DAYS(NOW())-TO_DAYS(str_to_date(book_update_time,'%Y-%m-%d %H'))) &lt;= 7)
+							  </if>
+							  <if test='record != null and record == 15'>
+							  and ((TO_DAYS(NOW())-TO_DAYS(str_to_date(book_update_time,'%Y-%m-%d %H'))) &lt;= 15)
+							  </if>
+							  <if test='record != null and record == 30'>
+							  and ((TO_DAYS(NOW())-TO_DAYS(str_to_date(book_update_time,'%Y-%m-%d %H'))) &lt;= 30)
+							  </if>
+							  <if test='record != null and record == 180'>
+							  and ((TO_DAYS(NOW())-TO_DAYS(str_to_date(book_update_time,'%Y-%m-%d %H'))) &lt;= 180)
+							  </if>
+							  limit #{start},#{limit} 
+	</select>
+	<select id="findBookByTitles" resultType="cn.black.book.entity.Book" >
+		select * from book where book_title like concat('%',#{book_title},'%') 
+							  or book_explain like concat('%',#{book_title},'%')
+							  or book_type like concat('%',#{book_title},'%')
+							  or book_author like concat('%',#{book_title},'%')
+	</select>
+	
+	<!-- 通过ID来删除书 -->
+	<delete id="removeBook" parameterType="java.lang.Integer">
+	    DELETE FROM book WHERE book_id=#{book_id}
+	</delete>
+	
+	<!-- 更新书本信息 -->
+	<update id="updateBook" parameterType="cn.black.book.entity.Book">
+		update book set 
+			book_title=#{book_title},
+			book_img=#{book_img},
+			book_author=#{book_author},
+			book_explain=#{book_explain},
+			book_type=#{book_type},
+			book_count=#{book_count},
+			book_update_time=#{book_update_time}
+			where book_id=#{book_id}
+	</update>
+	
+	<!-- 增加书 -->
+	<insert id="addBook" parameterType="cn.black.book.entity.Book">
+		insert into book(book_title,
+						 book_img,
+						 book_author,
+						 book_explain,
+						 book_type,
+						 book_count,
+						 book_update_time
+				  )values(#{book_title},
+				  		 #{book_img},
+				  		 #{book_author},
+				  		 #{book_explain},
+				  		 #{book_type},
+				  		 #{book_count},
+				  		 #{book_update_time})
+	</insert>
+</mapper>  

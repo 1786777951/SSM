@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>阅读</title>
+    <!--css-->
+    <link rel="stylesheet" href="lib/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/js/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="lib/css/public/header.css" charset="utf-8">
+    <link rel="stylesheet" href="lib/css/index.css" charset="utf-8">
+    <link rel="stylesheet" href="lib/css/public/footer.css" charset="utf-8">
+    <link rel="stylesheet" href="lib/css/reader.css" charset="utf-8">
+    
+   
+</head>
+<body>
+    <!--布局容器-->
+    <div class="container-fluid">
+        <!--引入header.html文件-->
+        <div id="header">
+    
+        </div>
+
+        <!--网页内容-->
+        <div id="main">
+            <!--小说内容-->
+            <div class="details">
+                <div class="title">
+                    <h2>标题</h2>
+                    <h4>更新时间</h4>
+                </div>
+                <div class="content">
+                </div>
+
+                <div class="next">
+                    <a href="javascript:BookChapter.prev();">上一章</a>
+                    <a href="javascript:1.prev();">返回目录</a>
+                    <a href="javascript:BookChapter.next();">下一章</a>
+                </div>
+            </div>
+        </div>
+
+        <!--引入footer.html文件-->
+        <div id="footer">
+
+        </div>
+
+    </div>
+     <!--js-->                     
+     <script src="lib/js/jquery-3.3.1.min.js"></script>
+     <script src="lib/js/bootstrap/js/bootstrap.min.js"></script>
+     <script src="lib/model/spop-gh-pages/dist/spop.js"></script>
+     <script src="lib/js/public/public.js"></script>
+     <script src="lib/js/reader.js"></script>
+</body>
+</html>

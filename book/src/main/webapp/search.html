@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索</title>
+    <!--css-->
+    <link rel="stylesheet" href="lib/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/js/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="lib/css/public/header.css" charset="utf-8">
+    <link rel="stylesheet" href="lib/css/search.css">
+    <link rel="stylesheet" href="lib/css/public/footer.css" charset="utf-8">
+</head>
+<body>
+    <!--布局容器-->
+    <div class="container-fluid">
+        <!--引入header.html文件-->
+        <div id="header">
+    
+        </div>
+
+        <!--网页内容-->
+        <div id="main">
+
+            <!--搜索框-->
+            <div class="top">
+                <form class="bs-example bs-example-form" role="form">
+                    <div class="row">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="SearchBooks">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" id="SearchinBooks" type="button">搜索</button>
+                                </span>
+                            </div><!-- /input-group -->
+                    </div>
+                </form>
+            </div>
+
+            <!--中间内容-->
+            <div class="middle">
+                <!--左边-->
+                <div class="left">
+                    <!--已选-->
+                    <ul class="select">
+                        <p>已选</p>
+                        <li>全部</li>
+                    </ul>
+                    <!--分类-->
+                    <ul class="classification">
+                        <p>分类</p>
+                        <li class="checkedBook">全部</li>
+                        <li>玄幻</li>
+                        <li>奇幻</li>
+                        <li>武侠</li>
+                        <li>仙侠</li>
+                        <li>都市</li>
+                        <li>现实</li>
+                        <li>军事</li>
+                        <li>历史</li>
+                        <li>游戏</li>
+                        <li>体育</li>
+                        <li>科幻</li>
+                        <li>灵异</li>
+                        <li>二次元</li>
+                        <li>短篇</li>
+                    </ul>
+                    <!--状态-->
+                    <ul class="state">
+                        <p>状态</p>
+                        <li class="checkedBook">全部</li>
+                        <li>连载</li>
+                        <li>完本</li>
+                    </ul>
+                    <!--字数-->
+                    <ul class="wordNumber">
+                        <p>字数</p>
+                        <li class="checkedBook">全部</li>
+                        <li>30w以下</li>
+                        <li>30w~50w</li>
+                        <li>50w~100w</li>
+                        <li>100w~200w</li>
+                        <li>200w以上</li>
+                    </ul>
+                    <!--更新时间-->
+                    <ul class="updateTime">
+                        <p>更新时间</p>
+                        <li class="checkedBook">全部</li>
+                        <li>三日内</li>
+                        <li>七日内</li>
+                        <li>半月内</li>
+                        <li>一个月内</li>
+                        <li>六个月内</li>
+                    </ul>
+                </div>
+                <!--右边-->
+                <div class="right">
+                    <!--排序-->
+                    <div class="sort">
+                        <ul>
+                            <li>人气排序</li>
+                            <li>更新时间</li>
+                            <li>总收藏</li>
+                            <li>总字数</li>
+                            <li>推荐票</li>
+                        </ul>
+                        <div>
+                            <p>共<span class="count"></span>本相关书籍</p> |
+                            <a href="#" id="grid">
+                                <span class="glyphicon glyphicon-th">
+
+                                </span>
+                            </a> | 
+                            <a href="#" id="list">
+                                <span class="glyphicon glyphicon-th-list">
+
+                                </span>
+                            </a>                   
+                        </div>
+                    </div>
+                    <!--书籍-->
+                    <div class="book">
+                        <!--网格-->
+                        <div id="book_grid">
+                            <!--小说-->
+                            <!-- <div class="grid">
+                                <img src="lib/images/default/0.jpg" alt="图片">
+                                <div class="grid_word">
+                                    <h4><a href="#">小说名字</a></h4>
+                                    <div class="author">
+                                        <span><a href="#">作者名字</a></span>
+                                        <p> 
+                                            <span>类型 · <a href="#">二次元</a></span> | 
+                                            <span>状态</span>
+                                        </p>
+                                    </div>
+                                    <p class="introduction">xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                                    <p class="word_number">XXXw字</p>
+                                </div>
+                            </div>-->
+
+                        </div>
+                        <!--列表-->
+                        <div id="book_list">
+                            <!--表格-->
+                            <table class="table table-hover table-condensed" >
+                                <thead>
+                                    <tr>
+                                        <td>类型</td>
+                                        <td>书名</td>
+                                        <td>最新章节</td>
+                                        <td>字数</td>
+                                        <td>作者</td>
+                                        <td>更新日期</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- <tr>
+                                        <td>类型</td>
+                                        <td>书名</td>
+                                        <td>最新章节</td>
+                                        <td>字数</td>
+                                        <td>作者</td>
+                                        <td>更新日期</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--分页-->
+                <div class="paging">
+                    <nav aria-label="...">
+                        <ul class="pagination pagination-lg">
+                            <!-- <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li> -->
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+        <!--引入footer.html文件-->
+        <div id="footer">
+
+        </div>
+
+    </div>
+    <!--js-->
+    <script src="lib/js/jquery-3.3.1.min.js"></script>
+    <script src="lib/js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/model/spop-gh-pages/dist/spop.js"></script>
+    <script src="lib/js/public/public.js"></script>
+    <script src="lib/js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>作家信息</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="../../js/layui/css/layui.css"  media="all">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <!--读者的数据页面-->
+        <table id="writer"  class="layui-hide" lay-filter="test"></table>
+        <script type="text/html" id="sexTpl">
+            {{#  if(d.user_sex == '0'){ }}
+              <span style="color: #F581B1;">{{ d.user_sex = "男" }}</span>
+            {{#  } else { }}
+            <span style="color:#1E9FFF;">{{ d.user_sex = "女" }}</span>
+            {{#  } }}
+        </script>
+        <script type="text/html" id="typeTpl">
+            {{#  if(d.user_type == '0'){ }}
+              <span style="color: #F581B1;">{{ d.user_type = "读者" }}</span>
+            {{#  } else { }}
+            <span style="color:#1E9FFF;">{{ d.user_type = "作者" }}</span>
+            {{#  } }}
+        </script>         
+        <script type="text/html" id="toolbarDemo">
+            <div class="layui-btn-container">
+                <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
+                <button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>
+                <button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button>
+            </div>
+        </script>
+        <script type="text/html" id="barDemo">
+            <a class="layui-btn layui-btn-xs" lay-event="edit">
+                <i class="layui-icon layui-icon-edit" style="font-size: 30px;"></i>编辑</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">
+                <i class="layui-icon layui-icon-delete" style="font-size: 30px;"></i>删除</a>
+        </script>
+
+        <!-- 需要弹出的修改界面 -->
+        <div class="layui-row" id="updateUser" style="display:none;">
+            <div class="layui-container layui-col-xs10" style="margin-top:35px;">
+                <form class="layui-form layui-form-pane" lay-filter="formTestFilter" id="addClientSub">
+                    <div class="layui-form-item" pane>
+                        <div class="layui-col-xs6">
+                            <label class="layui-form-label">ID:</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="user_id"  class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-col-xs6">
+                            <label class="layui-form-label">手机号:</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="user_phone"  class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item" pane>
+                        <div class="layui-col-xs6">
+                            <label class="layui-form-label">用户名:</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="user_name" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-col-xs6">
+                            <label class="layui-form-label">账号:</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="user_account" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item" pane>
+                        <div class="layui-col-xs6">
+                            <label class="layui-form-label">性别:</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="user_sex" value="0" title="男">
+                                <input type="radio" name="user_sex" value="1" title="女">
+                            </div>
+                        </div>
+                        <div class="layui-col-xs6">
+                            <label class="layui-form-label">邮箱:</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="user_email" class="layui-input">
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="layui-form-item" pane>
+                        <div class="layui-col-xs6">
+                            <label class="layui-form-label">身份:</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="user_type" value="0" title="读者">
+                                <input type="radio" name="user_type" value="1" title="作者">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="layui-form-item" pane>
+                        <div class="layui-col-xs12">
+                            <label class="layui-form-label">城市:</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="user_city" class="layui-input">
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="layui-form-item" pane>
+                        <div class="layui-col-xs12">
+                            <label class="layui-form-label">喜欢:</label>
+                            <div class="layui-input-block" id="user_like">
+                               
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="layui-form-item" pane>
+                        <label class="layui-form-label">自我介绍:</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea" name="user_Introduce"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button lay-filter="updateUser" lay-submit class="layui-btn">保存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    
+        <script src="../../js/jquery-3.3.1.min.js"></script>
+        <script src="../../js/layui/layui.js"></script>
+        <script src="../../js/backstage/local/writer.js"></script>
+    </body>
+</html>

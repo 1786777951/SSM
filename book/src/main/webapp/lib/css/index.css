@@ -1,0 +1,462 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none!important;
+    color: black;
+}
+ul li{
+    list-style: none;
+}
+body{
+    min-width: 1050px;
+}
+/*    内容    */
+.container-fluid{
+    padding: 0px;
+}
+    /*    top    */
+    #main .top{
+        overflow: hidden;
+        margin: 0 auto;
+        width: 95%
+    }
+    /*    本周强推    */
+    #main .top .hottest{
+        width: 20%;
+        float: left;
+        display: inline-block;
+    }
+    #main .top .hottest ul h3{
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+    #main .top .hottest ul li{
+        position: relative;
+        border-bottom: 1px dashed black;
+        padding: 10px;
+    }
+    #main .top .hottest ul .item a{
+        color: #aaa;
+    }
+    #main .top .hottest ul .title a{
+        color: black;
+    }
+    #main .top .hottest ul .author{
+        position: absolute;
+        display: inline-block;
+        right: 5px;
+    }
+    #main .top .hottest ul .author a{
+        font-size: 12px;
+        color: #999;
+    }
+    /*    轮播图    */
+    #main .top .carousel{
+        width: 60%;
+        position: relative;
+        float: left;
+        padding: 10px;
+    }
+    .active{
+        background-color: rgba(255, 255, 255,0.5)!important;
+    }
+    #main .top .carousel #carousel-example-generic{
+        width: 100%;
+    }
+    #main .top .carousel #carousel-example-generic .carousel-indicators{
+        width: 100%;
+        margin: 0px;
+        bottom: 0px;
+        left: 0px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    #main .top .carousel #carousel-example-generic .carousel-indicators li{
+        display: inline-block;
+        width: 20%;
+        height: 35px;
+        line-height: 35px;
+        margin: 0px;
+        border-radius: 0px;
+        float: left;
+    }
+    #main .top .carousel #carousel-example-generic .title_item{
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+    #main .top .carousel #carousel-example-generic .carousel-indicators .title_item span{
+       display: inline-block!important;
+       width: 20%;
+       float: left;
+       color: white;
+       font-weight: bold;
+       background-color: black;
+    }
+    #main .top .carousel .pic{
+        width: calc(50% - 2px);
+        height: auto;
+        display: inline-block;
+        padding: 10px;
+        background-color: rgb(247, 234, 234);
+    }
+    #main .top .carousel .pic img{
+        margin-top: 10px;
+      display: inline-block;
+    }
+    #main .top .carousel .pic h3{
+        font-size: 1.5em;
+        padding: 0px;
+        overflow: hidden;
+        margin-top: 5px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    #main .top .carousel .pic h3 a{
+        color: black;
+    }
+    #main .top .carousel .pic p{
+        font-size: 13px;
+        color: rgb(119, 113, 113);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    #main .top .carousel .pic p a{
+        font-size: 15px;
+        color: black;
+    }
+
+    /*    资讯    */
+    #main .top .information{
+        width: 20%;
+        display: inline-block;
+    }
+    #main .top .information ul h3{
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+    #main .top .information ul li a{
+        display: inline-block;
+        width: 100%;
+        font-size: 13px;
+        color: black;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; 
+    }
+    #main .top .information .item{
+        border-top: 1px solid black;
+        padding: 10px;
+    }
+    #main .top .information .item a{
+        color: black;
+    }
+    #main .top .information .item p a{
+        color: #888;
+    }
+    #main .top .information .item h2{
+        text-align: center;
+        font-size: 1.3em;
+        margin-top: 5px;
+    }
+    #main .top .information .item p{
+        font-size: 0.9em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    /*    中间    */
+    #main .middle{
+        overflow: hidden;
+        margin: 20px auto;
+        width: 95%;
+    }
+    /*    第一行    */
+    #main .middle .middle_first{
+        width: 100%;
+        overflow: hidden;
+    }
+    /*    3D旋转    */
+    #main .middle .middle_first .D3{
+        width: calc(25% - 20px);
+        display: inline-block;
+        float: left;
+        background-color: #f7f5f0;
+        margin: 0px 10px;
+        height: 385px;
+    }
+    #main .middle .middle_first .D3 #starsIF{
+        width: 100%;
+    }
+    #main .middle .middle_first .D3 .Loop{
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+    #main .middle .middle_first .D3 .Loop h3 a{
+        font-size: 18px;
+        color: black;
+    }
+    #main .middle .middle_first .D3 .Loop p:nth-of-type(1){
+        color: red;
+        font-size: 13px;
+        margin-bottom: 0px;
+    }
+    #main .middle .middle_first .D3 .Loop p:nth-of-type(2) span{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    #main .middle .middle_first .D3 .Loop p:nth-of-type(3){
+        padding: 0px 10px;
+        text-align: left;
+        font-size: 14px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+    #main .middle .middle_first .D3 .Loop p:nth-of-type(4){
+        display: block;
+        width: 100%;
+        bottom: 0px;
+        text-align: center;
+        position: absolute;
+        left: 0px;
+        height: 80px!important;
+    }
+    #main .middle .middle_first .D3 .Loop p:nth-of-type(4) a{
+        display: inline-block;
+        width: 100px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        color: white;
+        margin-top: 100px;
+        background-color: rgb(228, 47, 47);
+    }
+    #main .middle .middle_first .D3 .Loop p:nth-of-type(4) a:hover{
+        background-color: rgb(233, 71, 71);
+    }
+    /*    模块    */
+    #main .middle .modular{
+        overflow: hidden;
+        width: 75%;
+        right: 0px;
+    }
+
+    #main .middle .modular .modular_list{
+        width: calc(33.33% - 10px);
+        margin: 0px 5px;
+        border: 1px solid black;
+        float: left;
+    }
+
+    #main .middle .modular .modular_list .title{
+        background-color: #fff;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 5px;
+    }
+    #main .middle .modular .modular_list .title h2{
+        display: inline-block;
+        width: 30%;
+        font-size: 1.2vw;
+        margin: 10px;
+        float: left;
+        height: 20px;
+        line-height: 20px;
+    }
+    #main .middle .modular .modular_list .title p{
+        display: inline-block;
+        width: calc(70% - 20px);
+        height: 40px;
+        line-height: 40px;
+        margin: 0px;
+        padding-right: 10px;
+        text-align: right;
+        border-left: 1px solid rgba(112, 109, 109,0.5);
+        border-bottom: 1px solid rgba(112, 109, 109,0.5);
+    }
+
+    #main .middle .modular .modular_list .content{
+        width: 100%;
+        padding: 10px;
+    }
+    #main .middle .modular .modular_list .content ul li:nth-of-type(1){
+        overflow: hidden;
+        margin: 10px 0px;
+    }
+    #main .middle .modular .modular_list .content ul li:nth-of-type(1) img{
+        border: 1px solid rgba(112, 109, 109,0.5);
+        padding: 10px;
+        width: 40%;
+        display: inline-block;
+        float: left;
+    }
+    #main .middle .modular .modular_list .content ul li:nth-of-type(1) div{
+        width:60%;
+        display: inline-block;
+        padding:0px 10px;
+    }
+    #main .middle .modular .modular_list .content ul li:nth-of-type(1) div h3{
+        font-size: 1.1vw;
+        margin: 0px 0px 5px 0px;
+        text-align: center;
+        
+    }
+    #main .middle .modular .modular_list .content ul li:nth-of-type(1) div h3 a{
+        color: rgb(255, 153, 0);
+        display: inline-block;
+        width: 100%;
+    }
+    #main .middle .modular .modular_list .content ul li:nth-of-type(1) div p{
+        font-size: 0.8vw;
+        margin: 0px 0px 5px 0px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    #main .middle .modular .modular_list .content ul li{
+        position: relative;
+        margin: 5px 0px;
+    }
+    #main .middle .modular .modular_list .content ul li a{
+        color: #555;
+    }
+    #main .middle .modular .modular_list .content ul li span{
+        position: absolute;
+        right: 5px;
+        font-size: 1em;
+    }
+    /*    排行榜    */
+    #main .middle .ranking_list{
+        padding: 10px;
+    }
+    #main .middle .ranking_list .switch_top {
+
+    }
+    #main .middle .ranking_list .switch_top h2{
+        padding-bottom: 5px;
+        margin-bottom: -2px;
+        display: inline-block;
+        border-bottom: 3px solid orange;
+    }
+    #main .middle .ranking_list .switch_top ul{
+        display: inline-block;
+        margin:0px;
+        margin-left: 10px;
+    }
+    #main .middle .ranking_list .switch_top ul li{
+        font-size: 16px;
+        display: inline-block;
+        padding: 5px;
+        cursor: pointer;
+    }
+    #main .middle .ranking_list .switch_content{
+        border-top: 1px solid black;
+        padding: 10px;
+        position: relative;
+        height: 300px;
+    }
+    #main .middle .ranking_list .switch_content div{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    #main .middle .ranking_list .switch_content div ul{
+        display: inline-block;
+        width: calc(33.333% - 4px);
+        height: 100%;
+        float: left;
+    }
+    #main .middle .ranking_list .switch_content div ul li{
+        display: inline-block;
+        width: 100%;
+        line-height: 20px;
+        padding: 5px;
+        position: relative;
+        
+    }
+    #main .middle .ranking_list .switch_content div ul li span:nth-of-type(1){
+        display: inline-block;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        background-color: orange;
+        color: white;
+    }
+    #main .middle .ranking_list .switch_content div ul li span:nth-of-type(2) a{
+      font-size: 14px;
+      margin-left: 5px;
+      color: black;  
+    }
+    #main .middle .ranking_list .switch_content div ul li span:nth-of-type(3){
+      font-size: 12px;
+      position: absolute;
+      margin-left: 5px;
+      right: 5px;
+      color: rgb(133, 130, 130);  
+    }
+    /*    bottom    */
+    #main .bottom {
+        overflow: hidden;
+        margin: 0 auto;
+        width: 95%
+    }
+    #main .bottom .friendship{
+        padding: 10px;
+    }
+    #main .bottom .friendship h2{
+        padding-bottom: 5px;
+        margin-bottom: -2px;
+        display: inline-block;
+        border-bottom: 3px solid orange;
+    }
+    #main .bottom .friendship div{
+        border-top: 1px solid black;
+        padding: 10px;
+    }
+    #main .bottom .friendship div a{
+        display: inline-block;
+        padding: 5px;
+        font-size: 16px;
+        color: rgb(109, 105, 105);
+    }
+
+/*   横图    */
+#main .transverse{
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+/*   媒体查询    */
+@media screen and (min-width:1300px){
+    #main .top .carousel .pic{
+        margin-top: 15px;
+    }
+    #main .top .carousel .pic:nth-of-type(3){
+        display: none;
+    }
+    #main .top .carousel .pic:nth-of-type(4){
+        display: none;
+    }
+}
+    

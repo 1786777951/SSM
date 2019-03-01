@@ -1,0 +1,217 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none!important;
+}
+ul li{
+    list-style: none;
+}
+body{
+    min-width: 1050px;
+}
+/*    内容    */
+.container-fluid{
+    padding: 0px;
+}
+
+/*    网页内容    */
+#main{
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*    搜索框    */
+#main .top{
+    width: 75%;
+    text-align: center;
+    margin: 25px auto;
+    padding: 15px;
+}
+#main .top form{
+    text-align:center;
+}
+#main .top form .row{
+    text-align: center;
+}
+#main .top form .input-group{
+    width: 50%;
+    margin: 0 auto;
+    height: 50px;
+
+}
+#main .top form .input-group input,#main .top form .input-group .input-group-btn button{
+    height: 100%;
+    border-radius: 0px;
+}
+#main .top form .input-group .input-group-btn button{
+    width:80px;
+    color: white;
+    font-size: 18px;
+    text-shadow: none;
+    background-color: rgb(223, 49, 49);
+    font-weight: bold;
+    background-image: none;
+}
+#main .top form .input-group .input-group-btn button:hover{
+    background-color: rgb(156, 33, 33);
+}
+
+/*    中间内容    */
+#main .middle{
+    overflow: hidden;
+}
+    /*    左边    */
+    #main .middle .left{
+        display: inline-block;
+        box-sizing: border-box;
+        width: 25%;
+        height: 100%;
+        float: left;
+        padding: 8px;
+    }
+
+    #main .middle .left ul{
+        padding: 10px;
+        border-bottom: 1px solid rgba(56, 53, 53,0.2);
+    }
+    #main .middle .left ul:last-child{
+        border:none;
+    }
+    #main .middle .left ul p{
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #main .middle .left ul li{
+        display: inline-block;
+        cursor:pointer;
+        margin: 5px;
+        padding: 5px;
+        font-size: 13px;
+    }
+    #main .middle .left ul:nth-of-type(1) li{
+        background-color: rgb(221, 68, 68)!important;
+    }
+    .checkedBook{
+        background-color: black;
+        color: white;
+    }
+    /*    右边    */
+    #main .middle .right{
+        display: inline-block;
+        box-sizing: border-box;
+        width: 75%;
+        height: 100%;
+        padding: 10px;
+    }
+    /*    排序    */
+    #main .middle .right .sort{
+        width: 100%;
+        background-color: rgb(236, 165, 57);
+        overflow: hidden;
+        text-align: right;
+        margin: 5px 0px 10px 0px;
+    }
+    #main .middle .right .sort ul{
+        margin: 0px;
+        float: left;
+    }
+    #main .middle .right .sort ul li{
+        padding: 10px;
+        display: inline-block;
+        cursor:pointer;
+        color: #555;
+        font-size: 13px;
+    }
+    #main .middle .right .sort ul li:nth-of-type(1){
+        color: rgb(221, 68, 68);
+        font-weight: bold;
+    }
+    #main .middle .right .sort div{
+        padding: 10px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    #main .middle .right .sort div p{
+        display: inline-block;
+        margin: 0px 10px;
+        font-size: 13px;
+    }
+    #main .middle .right .sort div a{
+        margin: 0px 5px;
+    }
+    /*    书籍    */
+    #main .middle .right .book{
+        height: 800px;
+        padding: 10px;
+    }
+    /*    网格    */
+    #book_grid{
+        overflow: hidden;
+    }
+    #book_grid .grid{
+        width: 50%;
+        padding: 5px;
+        box-sizing: border-box;
+        display: inline-block;
+        float: left;
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+    }
+    #book_grid .grid img{
+        display: inline-block;
+        width: 145px;
+        float: left;
+    }
+    #book_grid .grid .grid_word{
+        width: calc(100% - 145px);
+        padding: 5px;
+        height: 193.3px;
+        display: inline-block;
+    }
+    #book_grid .grid .grid_word .author{
+        font-size: 13px;
+        margin: 0px;
+    }
+    #book_grid .grid .grid_word .introduction{
+        /*    自动换行    */
+        word-wrap:break-word; 
+        word-break:normal; 
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp:3;
+        -webkit-box-orient: vertical;
+    }
+    #book_grid .grid .grid_word .word_number{
+        margin: 0px;
+    }
+    /*    列表    */
+    #book_list{
+        display: none;
+        overflow: hidden;
+    }
+    #book_list table thead tr td{
+        font-size: 13px;
+        font-weight: bold;
+
+    }
+    #book_list table tbody tr:nth-of-type(1) td{
+        border-top: none;
+    }
+    #book_list table tbody tr td{
+        color: rgba(65, 65, 65,0.5);
+    }
+
+    /*分页*/
+    .middle .paging nav{
+        text-align: center;
+    }
+    .middle .paging nav ul li:hover{
+        cursor:pointer;
+    }

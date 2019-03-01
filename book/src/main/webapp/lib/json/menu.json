@@ -1,0 +1,108 @@
+[
+    {
+      "name": "网站情况",
+      "logo":"layui-icon-tips",
+      "url": "#",
+      "id": "1",
+      "pId": "0"
+    },
+    {
+      "name": "图书",
+      "logo":"1.html",
+      "url": "1.html",
+      "id": "4",
+      "pId": "1"
+    },
+    {
+      "name": "书籍",
+      "logo":"layui-icon-template-1",
+      "url": "../backstage/local/book.html",
+      "id": "5",
+      "pId": "0"
+    },
+    {
+      "name": "用户",
+      "logo":"layui-icon-username",
+      "url": "#",
+      "id": "6",
+      "pId": "0"
+    },
+    {
+      "name": "读者",
+      "logo":"",
+      "url": "../backstage/local/readers.html",
+      "id": "7",
+      "pId": "1"
+    },
+    {
+      "name": "作家",
+      "logo":"",
+      "url": "../backstage/local/writer.html",
+      "id": "8",
+      "pId": "1"
+    },
+    {
+      "name": "后台管理员",
+      "logo":"",
+      "url": "../backstage/local/admin.html",
+      "id": "10",
+      "pId": "1"
+    },
+    {
+      "name": "设置",
+      "logo":"layui-icon-set-fill",
+      "url": "#",
+      "id": "11",
+      "pId": "0"
+    },
+    {
+      "name": "系统设置",
+      "logo":"",
+      "url": "#",
+      "id": "12",
+      "pId": "1"
+    },
+    {
+      "name": "网站设置",
+      "logo":"",
+      "url": "1.html",
+      "id": "13",
+      "pId": "2"
+    },
+    {
+      "name": "邮件服务",
+      "logo":"",
+      "url": "1.html",
+      "id": "14",
+      "pId": "2"
+    },
+    {
+        "name": "信号管理",
+        "logo":"",
+        "url": "1.html",
+        "id": "15",
+        "pId": "2"
+    },
+    {
+      "name": "我的设置",
+      "logo":"",
+      "url": "#",
+      "id": "16",
+      "pId": "1"
+    },
+    {
+      "name": "基本资料",
+      "logo":"",
+      "url": "1.html",
+      "id": "17",
+      "pId": "2"
+    },
+    {
+      "name": "修改密码",
+      "logo":"",
+      "url": "1.html",
+      "id": "18",
+      "pId": "2"
+    }
+  ]
+  

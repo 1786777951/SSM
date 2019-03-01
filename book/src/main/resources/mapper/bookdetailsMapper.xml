@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="cn.black.book.dao.BookdetailsDao">  
+	<!-- 查询书所有章节 -->
+	<select id="findBookdetails" parameterType="java.lang.Integer" resultType="cn.black.book.entity.Bookdetails" >
+		select book_id,
+			   bookdetails_id,
+			   bookdetails_volume_title,
+			   bookdetails_chapter_title,
+			   bookdetails_content_count,
+			   bookdetails_update_time from
+			   bookdetails where book_id=#{book_id}
+	</select>
+
+	<!-- 查询章节内容 -->
+	<select id="findbookdetails_content" parameterType="java.lang.Integer" resultType="cn.black.book.entity.Bookdetails" >
+		select * from bookdetails where book_id=#{book_id} and bookdetails_id=#{bookdetails_id}
+	</select>
+
+	<!-- 增加章节 -->
+	<insert id="addBookdetails" parameterType="cn.black.book.entity.Bookdetails">
+		insert into bookdetails( bookdetails_volume_title,
+								 bookdetails_chapter_title,
+								 bookdetails_content,
+								 bookdetails_content_count,
+								 bookdetails_update_time,
+								 book_id
+						  )values(#{bookdetails_volume_title},
+						  		 #{bookdetails_chapter_title},
+						  		 #{bookdetails_content},
+						  		 #{bookdetails_content_count},
+						  		 #{bookdetails_update_time},
+						  		 #{book_id})
+	</insert>
+	
+	<!-- 更新章信息 -->
+	<update id="updateBookdetails" parameterType="cn.black.book.entity.Bookdetails">
+		update bookdetails set 
+			bookdetails_volume_title=#{bookdetails_volume_title},
+			bookdetails_chapter_title=#{bookdetails_chapter_title},
+			bookdetails_content=#{bookdetails_content},
+			bookdetails_content_count=#{bookdetails_content_count},
+			bookdetails_update_time=#{bookdetails_update_time}
+			where book_id=#{book_id} and bookdetails_id=#{bookdetails_id}
+	</update>
+
+	<!-- 通过ID来删除章 -->
+	<delete id="removeBookdetails" parameterType="java.lang.Integer">
+	    DELETE FROM bookdetails WHERE book_id=#{book_id} and bookdetails_id=#{bookdetails_id}
+	</delete>
+	
+	
+	
+	
+</mapper>  

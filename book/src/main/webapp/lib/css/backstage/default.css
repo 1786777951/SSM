@@ -1,0 +1,183 @@
+.layui-nav .layui-nav-child dd.layui-this a, .layui-nav-child dd.layui-this{
+    background-color: #ccc;
+}
+/*列表*/
+.layui-side-scroll{
+    background: white;
+    color: black;
+}
+.layui-side-scroll ul li a{
+    color: black!important;
+}
+.layui-side-scroll ul li a:hover{
+    background: white!important;
+}
+.layui-side-scroll ul li a:nth-of-type(1):hover{
+    background: #d2d2d2!important;
+}
+.layui-side-scroll .layui-nav-child{
+    background: #eeeeee!important;
+}
+
+/* 导航栏 */
+.layui-layout-right{
+    padding-right: 0px;
+}
+.layui-layout-right > .layui-nav-item > a {
+    height: 60px!important;
+    text-align: right;
+}
+.layui-layout-right > .layui-nav-item > a > i{
+    color: white;
+    font-size: 30px;
+}
+.layui-layout-right > .layui-nav-item > a > i + span{
+    margin: -20px 0px 0px -10px;
+    font-size: 12px;
+    background-color: red;
+    border-radius: 50%;
+}
+.layui-layout-right > .layui-nav-item > a > i + span + span{
+    display: none;
+}
+.layui-layout-right > .layui-nav-item > a > img{
+    margin : 0px 10px;
+    
+}
+
+/* 左侧导航区域*/
+.layui-side > .layui-side-scroll .layui-nav >div{
+    overflow: hidden;
+    text-align: center;
+    color: black;
+    margin: 20px 0px;
+}
+
+.layui-side > .layui-side-scroll .layui-nav >div  div{
+    text-align: center;
+}
+.layui-side > .layui-side-scroll .layui-nav >div  div:nth-of-type(1){
+    text-align: right;
+}
+.layui-side > .layui-side-scroll .layui-nav >div  div:nth-of-type(2){
+    text-align: left;
+    padding: 5px 0px 0px 10px;
+}
+.layui-side > .layui-side-scroll .layui-nav >div  div > img{
+    width: 70%;
+    border-radius: 50%;
+}
+.layui-side > .layui-side-scroll .layui-nav >div  div > p{
+    font-size: 17px;
+}
+.layui-side > .layui-side-scroll .layui-nav >div  div > span{
+    font-size: 11px;
+    color: #888;
+}
+.layui-side > .layui-side-scroll .layui-nav >div  div > span > .layui-badge-dot{
+    margin: 0px 4px;
+    top: 68%;
+}
+
+.layui-side .layui-nav-item > a > i{
+    margin-right: 10px;
+    font-size: 20px;
+}
+.layui-side .layui-nav-item > .layui-nav-child > dd > a{
+    padding-left: 60px;
+    font-size: 13px;
+}
+.layui-side .layui-nav-item > .layui-nav-child > dd > dl > dd > a{
+    padding-left: 75px;
+    font-size: 13px;
+}
+/*小箭头方向处理*/ 
+.layui-side > .layui-nav .layui-nav-mored, .layui-nav-itemed > a .layui-nav-more {
+    border-bottom-color: black;
+}
+.layui-nav .layui-nav-more {
+    border-top-color: black;
+}
+.layui-nav{
+    background: white;
+}
+/*内容主体区域*/
+.layui-body{
+    background: #f2f8f9;
+}
+.layui-body > .layui-tab > .layui-tab-title > li > i:nth-of-type(1){
+    margin: 0 5px;
+    font-size: 17px;
+}
+.layui-body > .layui-tab > .layui-tab-title > [lay-id="0"] > i:nth-of-type(2){
+    display: none!important;
+}
+#tabzu{
+    margin: 0px 0px;
+}
+
+/*  主页的css    */
+.index_top{
+    width: 100%;
+    padding: 20px;
+}
+.index_top > .card_body{
+    display: inline-block;
+    width: calc(25% - 80px);
+    margin: 10px;
+    background-color: white;
+    padding: 25px;
+}
+
+.index_top > .card_body > .clean_fix{
+    width: 100%;
+    text-align: right;
+    overflow: hidden;
+}
+.index_top > .card_body > .clean_fix >.float_left{
+    display: inline-block;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.index_top > .card_body > .clean_fix >.float_left > i{
+    font-size: 30px;
+    
+}
+.index_top > .card_body > .clean_fix >.float_right{
+    display: inline-block;
+    float: right;
+}
+.index_top > .card_body > .clean_fix >.float_right > div h3{
+    font-size: 30px;
+}
+.index_top > .card_body > p{
+    margin-top: 20px;
+    text-align: right;
+    font-size: 13px;
+    color: #999;
+}
+
+.index_content{
+    width: 100%;
+    padding: 20px;
+    height: 800px;
+    text-align: center;
+    overflow: hidden;
+}
+.index_content .tubian{
+    width: 45%;
+    float: left;
+}
+
+#books{
+    width: 600px!important;
+    height:400px!important;
+    background-color: #2c343c;
+}
+#users{
+    width: 600px!important;
+    height:400px!important;
+    background-color: #2c343c;
+}

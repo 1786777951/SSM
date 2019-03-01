@@ -1,0 +1,50 @@
+/*   网页内容   */
+#main{
+    width: 85%;
+    padding: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+#main .details{
+    width: 80%;
+    margin: 0 auto;
+}
+#main .details .title{
+    
+}
+#main .details .title h2,#main .details .title h4{
+    text-align: center;
+}
+#main .details .title h2{
+    margin: 25px 0px;
+}
+
+#main .details .content{
+    background-color:#eee;
+    padding: 10px;
+    
+}
+#main .details .content p{
+    font-size: 16px;
+    text-indent: 2em;
+}
+#main .details .next{
+    text-align: center;
+    margin: 30px auto;
+}
+#main .details .next a{
+    display: inline-block;
+    text-align: center;
+    margin: 15px 15px;
+    width: 95px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    height: 45px;
+    line-height:45px;
+    background-color: #ccc;
+    border:1px solid #eee;
+}
+#main .details .next a:hover{
+    background-color: #555;
+    color: white;
+}

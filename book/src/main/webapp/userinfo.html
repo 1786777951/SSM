@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人信息</title>
+    <!--css-->
+    <link rel="stylesheet" href="lib/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/js/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="lib/css/public/header.css" charset="utf-8">
+    <link rel="stylesheet" href="lib/css/index.css" charset="utf-8">
+    <link rel="stylesheet" href="lib/css/public/footer.css" charset="utf-8">
+    <link rel="stylesheet" href="lib/css/userinfo.css">  
+</head>
+<body>
+    <!--布局容器-->
+    <div class="container-fluid">
+        <!--引入header.html文件-->
+        <div id="header">
+            
+        </div>
+
+        <!--用户信息-->
+        <div id="main">
+            <!--左侧列表-->
+            <div class="left_list">
+                <ul>
+                    <h2>我的设置</h2>
+                    <li class="glyphicon glyphicon-user"><a href="javascript:;">个人信息</a></li>
+                    <li class="glyphicon glyphicon-tasks"><a href="javascript:;">书架</a></li>
+                    <li class="glyphicon glyphicon-list-alt"><a href="javascript:;">历史记录</a></li>
+                    <li class="glyphicon glyphicon-send"><a href="javascript:;">作品</a></li>
+                    <li class="glyphicon glyphicon-wrench"><a href="javascript:;">设置</a></li>
+                </ul>
+            </div>
+            <!--右侧表单-->
+            <div class="right_form">
+                <!--面包屑-->
+                <ol class="breadcrumb">
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="#">个人设置</a></li>
+                    <li class="active">个人信息</li>
+                </ol>
+                <!--个人信息-->
+                <div class="right_content information">
+                    <form class="form-horizontal" id="myform" method="post" enctype="multipart/form-data">
+                        <!--头像-->
+                        <div class="form-group has-feedback">
+                            <label for="info_img" class="col-sm-2 control-label">头像</label>
+                            <div class="col-sm-6">
+                                <img id="upload" src="./lib/images/account/admin.png" alt="图片">
+                            </div>
+                        </div>
+                        <input type="file" name="fileToUpload" id="fileToUpload" style="display:none;">
+                        
+                        <!--手机号-->
+                        <div class="form-group has-feedback">
+                            <label for="phone" class="col-sm-2 control-label">手机号</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" name="user_phone" id="user_phone" placeholder="中国大陆标准格式" aria-describedby="phone_check">
+                                <span class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+                                <span id="phone_check" class="sr-only">(error)</span>   
+                            </div>
+                        </div>
+                        <!--用户名-->
+                        <div class="form-group has-feedback">
+                            <label for="user_name" class="col-sm-2 control-label">用户名</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" name="user_name" id="user_name" placeholder="字母开头,5~16位,允许字母数字下划线" aria-describedby="name_check">
+                                <span class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+                                <span id="name_check" class="sr-only">(error)</span>
+                            </div>
+                        </div>
+                        <!--确认邮箱-->
+                        <div class="form-group has-feedback">
+                            <label for="email" class="col-sm-2 control-label">邮箱</label>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control"  name="user_email"  id="user_email" placeholder="QQ、谷歌、163" aria-describedby="email_check">
+                                <span class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+                                <span id="email_check" class="sr-only">(error)</span>
+                            </div>
+                        </div>
+                        <!--地址-->
+                        <div class="form-group has-feedback">
+                            <label for="user_city" class="col-sm-2 control-label">城市</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control"  name="user_city"  id="user_city" placeholder="北上广深" aria-describedby="city_check">
+                                <span class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+                                <span id="city_check" class="sr-only">(error)</span>
+                            </div>
+                        </div>
+                        <!--性别-->
+                        <div class="form-group">
+                            <label for="user_sex" class="col-sm-2 control-label">性别</label>
+                            <div class="col-sm-6">
+                                <div class="radio col-sm-2">
+                                    <label>
+                                    <input type="radio" name="user_sex" id="user_sex1" value="0">
+                                        男
+                                    </label>
+                                </div>
+                                <div class="radio col-sm-2">
+                                    <label>
+                                    <input type="radio" name="user_sex" id="user_sex2" value="1">
+                                        女
+                                    </label>
+                                </div>
+                            </div>                     
+                        </div>
+                        <!--爱好-->
+                        <div class="form-group">
+                            <label for="like" class="col-sm-2 control-label">喜欢类型</label>
+                            <div class="col-sm-6" id="likecheck">
+                                
+                            </div>
+                        </div>
+                        <!--个人简介-->
+                        <div class="form-group">
+                            <label for="user_introduce" class="col-sm-2 control-label">个人留言</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" rows="3" name="user_introduce" id="user_introduce"></textarea>
+                            </div>
+                        </div>
+                        <!--修改-->
+                        <div class="form-group login">
+                            <div class="col-sm-9">
+                                <button class="btn button" type="button">
+                                    <span class="submit" id="update">修改</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--书架-->
+                <div class="right_content bookshelf">
+                    
+                </div>
+                <!--历史记录-->
+                <div class="right_content historical ">
+                    <ul class="history">
+                        <li>
+                            <span class="index">1</span>
+                            <b class="title">书标题</b>
+                            <span class="author">书作者</span>
+                            <p class="explain">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介</p>
+                        </li>
+                        <li>
+                                <span class="index">2</span>
+                                <b class="title">书标题</b>
+                                <span class="author">书作者</span>
+                                <p class="explain">类型</p>
+                            </li>
+                            <li>
+                                    <span class="index">3</span>
+                                    <b class="title">书标题</b>
+                                    <span class="author">书作者</span>
+                                    <p class="explain">类型</p>
+                                </li>
+                    </ul>
+                </div>
+                <!--作品-->
+                <div class="right_content works">
+                
+                </div>
+                <!--设置-->
+                <div class="right_content set">
+                            
+                </div>
+            </div>
+
+        </div>
+
+        <!--引入footer.html文件-->
+        <div id="footer">
+
+        </div>
+
+    </div>
+     <!--js-->                     
+     <script src="lib/js/jquery-3.3.1.min.js"></script>
+     <script src="lib/js/bootstrap/js/bootstrap.min.js"></script>
+     <script src="lib/model/spop-gh-pages/dist/spop.js"></script>
+     <script src="lib/js/public/public.js"></script>
+     <script src="lib/js/userinfo.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+/*      placeholder        */
+input::-webkit-input-placeholder {font-size: 15px;}
+input:focus::-webkit-input-placeholder {font-size: 12px; color: red;}
+/* Firefox < 19 */
+input:-moz-placeholder {font-size: 15px;}
+input:focus:-moz-placeholder {font-size: 12px; color: red;}
+/* Firefox > 19 */
+input::-moz-placeholder {font-size: 15px;}
+input:focus::-moz-placeholder {font-size: 12px; color: red;}
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {font-size: 15px;}
+input:focus:-ms-input-placeholder {font-size: 12px; color: red;}
+input,button{outline:none!important;}
+#header{
+    width: 100%;
+    margin: 0 auto;
+}
+/*   模态框   */
+#header #myModal form .input-group{
+    width: 100%;
+    margin-top: 25px;
+}
+#header #myModal .modal-header{
+    height: 50px;
+    line-height: 50px;
+    border:none;
+}
+#header #myModal .modal-body{
+    padding:10px 15px;
+}
+#header #myModal .modal-footer{
+    border: none;
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 35px;
+    text-align: center;
+}
+#header #myModal .modal-footer button{
+    width: 80%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    padding: 0px;
+    margin-top: 20px;
+    background-color: rgb(10, 41, 109);
+    color: white;
+    font-size: 18px;
+    text-shadow: none;
+}
+#header #myModal .modal-footer p{
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: right;
+    position: relative;
+}
+#header #myModal .modal-footer p span{
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    left: 0px;
+}
+#header #myModal .modal-footer p a{
+    font-size: 15px;
+    color: black;
+    margin: 0px 10px;
+}
+#header #myModal form .input-group input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+}
+#header #myModal form .name input,#header #myModal form .pass input{
+    width: 100%;
+}
+#header #myModal form .identifying{
+    overflow: hidden;
+}
+#header #myModal form .identifying input{
+    
+    width: 70%;
+    float: left;
+}
+#header #myModal form .identifying #check-code{
+    width: 30%;
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background: url(../../images/header/login.jpg) no-repeat;
+    background-size: 100% 100%;
+    opacity: 1 !important;
+    filter: alpha(opacity=0) !important;
+  }
+.code{
+    font-family: Arial;
+    font-style: italic;
+    font-size: 20px;
+    border: 0;
+    padding: 2px 3px;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    float: left;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #6D6D72;
+}
+/*   top   */
+#header .top{
+    width:90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+    /*   logo   */
+    #header .top #logo{
+        width: 75px;
+        height:75px;
+        margin: 0 auto;
+    }
+    #header .top #logo img{
+        width: 100%;
+        height:100%;
+    }
+    /*   搜索框   */
+    #header .top input,#header .top button{
+        display: inline-block;
+        height: 35px;
+        line-height: 35px;
+    }
+    #header .top input{
+        width: 75%;
+    }
+    #header .top button{
+        width: 25%;
+        padding: 0px;
+        border-radius: 0px;
+        margin: -1px 0px 0px -5px;
+    }
+    #header .row .grid{
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+    }
+    /*   登陆 | 注册   */
+    #header .top .login a{
+        display: inline-block;
+        width: 40%;
+        height: 35px;
+        line-height: 35px;
+    }
+    /*   账号信息   */
+    #header .top .account img{
+        width: 45px;
+        height: 45px;
+        left: 0px;
+        display: inline-block;
+    }
+    #header .top .account ul{
+        left: 0px;
+        width: 70%;
+        height: 100px;
+        line-height: 100px;
+        display: inline-block;
+    }
+    #header .top .account ul li{
+        display: inline-block;
+    }
+
+    #header .top .account ul li a{
+        height: 35px;
+        padding: 10px;
+    }
+    #header .top .account ul .Codetitle a{
+        font-size: 15px;
+        font-weight: bold;
+        color: rgb(253, 81, 13);
+    }
+
+/*   title   */
+#header .title{
+    width: 100%;
+}
+    /*   导航栏   */
+    #header .title .navigation{
+        line-height: 30px;
+        text-align: center;
+        background-color: orange;
+        position: relative;
+    }
+    #header .title .navigation .menu_first{
+        margin: 0px auto;
+        text-align: center;
+        overflow: hidden;
+    }
+    #header .title .navigation .menu_first li{
+        width: 10%;
+        display: inline-block;
+        margin: 0px -2px;
+    }
+    #header .title .navigation .menu_first li a{
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-size: 1.3em;
+        display: inline-block;
+        padding: 5px 15px 5px 15px;
+    }
+    #header .title .navigation .menu_first li:hover{
+        background-color: rgba(0, 0, 0, 0.1)
+    }
+
+    /*   二级菜单   */
+    #header .title .navigation .menu_second{
+        margin: 0 auto;
+        height: 0px;
+        text-align: center;
+        background-color: rgba(0,0,0,0.8);
+        position: absolute;
+        overflow: hidden;
+        z-index: 999;
+    }
+    #header .title .navigation .menu_first:hover .menu_second{
+        height: 370px;
+        transition: all 0.5s;
+    }
+    #header .title .navigation .menu_second ul{
+        width: 10%;
+        height: 100%;
+        display: inline-block;
+        vertical-align: text-top;
+        margin: 0px -2px;
+    }
+    #header .title .navigation .menu_second ul:nth-of-type(1) li{
+        border: none;
+    }
+    #header .title .navigation .menu_second ul li{
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        display: inline-block;
+        color: white;
+        margin: 0px;
+        cursor:pointer;
+        font-size: 14px;
+        position: relative;  
+        border-left: 1px solid rgba(255, 255, 255, 0.3); 
+    }
+    #header .title .navigation .menu_second ul li:hover::before{
+        content: "";
+        position: absolute;
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        background: url(../../images/menu/left.png) no-repeat;
+        background-size: 100%;
+        left: 0px;
+        top: 2px;
+    }
+    #header .title .navigation .menu_second ul li:hover::after{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        right: 0px;
+        background: url(../../images/menu/right.png) no-repeat;
+        background-size: 100%;
+        top: 2px;
+    }

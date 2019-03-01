@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>注册</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css-->
+        <link rel="stylesheet" href="../js/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../js/bootstrap/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../css/public/register.css">
+        <link rel="stylesheet" href="../css/public/select.css">
+        <link rel="stylesheet" href="../css/public/login.css">
+        <!--js-->
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/public/register.js"></script>
+        <script src="../js/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../js/public/select.js"></script>
+        <script src="../js/public/login.js"></script>
+        
+    </head>
+    <body>
+        <div class="container-fluid">
+            <!--内容-->
+            <div id="main">
+                
+                <form class="form-horizontal" id="form">
+                    <!--返回首页-->
+                    <a href="../../index.html" class="back">返回首页</a>
+                    <!--欢迎加入!-->
+                    <div class="wecome">
+                        <h2>欢迎加入我们!</h2>
+                    </div>
+                    <!--手机号-->
+                    <div class="form-group has-error has-feedback">
+                        <label for="phone" class="col-sm-2 control-label">手机号</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="user_phone" id="user_phone" placeholder="中国大陆标准格式" aria-describedby="phone_check">
+                            <span class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+                            <span id="phone_check" class="sr-only">(error)</span>   
+                        </div>
+                        <div class="alert alert-danger col-sm-2 tips" role="alert">请填入手机号！</div>
+                    </div>
+                    <!--账号-->
+                    <div class="form-group has-error has-feedback">
+                        <label for="user_account" class="col-sm-2 control-label">账号</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="user_account" id="user_account" placeholder="账号"  aria-describedby="account_check">
+                            <span class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+                            <span id="account_check"  class="sr-only">(error)</span>
+                        </div>
+                        <div class="alert alert-danger col-sm-2 tips" role="alert">请填入账号！</div>
+                    </div>
+                    <!--用户名-->
+                    <div class="form-group has-error has-feedback">
+                        <label for="user_name" class="col-sm-2 control-label">用户名</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="user_name" id="user_name" placeholder="字母开头,5~16位,允许字母数字下划线" aria-describedby="name_check">
+                            <span class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+                            <span id="name_check" class="sr-only">(error)</span>
+                        </div>
+                        <div class="alert alert-danger col-sm-2 tips" role="alert">请填入用户名！</div>
+                    </div>
+                    <!--密码-->
+                    <div class="form-group has-error  has-feedback">
+                        <label for="pass" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" name="user_pass" id="user_pass" placeholder="越复杂越好" aria-describedby="pass_check">
+                            <span class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+                            <span id="pass_check" class="sr-only">(error)</span>
+                        </div>
+                        <div class="alert alert-danger col-sm-2 tips" role="alert">请填入密码！</div>
+                    </div>
+                    <!--确认密码-->
+                    <div class="form-group has-error  has-feedback">
+                        <label for="pass2" class="col-sm-2 control-label">确认密码</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" id="user_pass2" placeholder="确认密码" aria-describedby="passSecond_check">
+                            <span class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+                            <span id="passSecond_check" class="sr-only">(error)</span>
+                        </div>
+                        <div class="alert alert-danger col-sm-2 tips" role="alert">请再次填入密码！</div>
+                    </div>
+                    <!--确认邮箱-->
+                    <div class="form-group has-error  has-feedback">
+                        <label for="email" class="col-sm-2 control-label">邮箱</label>
+                        <div class="col-sm-7">
+                            <input type="email" class="form-control"  name="user_email"  id="user_email" placeholder="QQ、谷歌、163" aria-describedby="email_check">
+                            <span class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+                            <span id="email_check" class="sr-only">(error)</span>
+                        </div>
+                        <div class="alert alert-danger col-sm-2 tips" role="alert">请填入邮箱！</div>
+                    </div>
+                    <!--地址-->
+                    <div class="form-group has-error  has-feedback">
+                        <label for="user_city" class="col-sm-2 control-label">城市</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control"  name="user_city"  id="user_city" placeholder="北上广深" aria-describedby="city_check">
+                            <span class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+                            <span id="city_check" class="sr-only">(error)</span>
+                        </div>
+                        <div class="alert alert-danger col-sm-2 tips" role="alert">请填入城市！</div>
+                    </div>
+                    <!--性别-->
+                    <div class="form-group">
+                        <label for="user_sex" class="col-sm-2 control-label">性别</label>
+                        <div class="col-sm-7">
+                            <div class="radio col-sm-2">
+                                <label>
+                                <input type="radio" name="user_sex" id="optionsRadios1" value="0" checked>
+                                男
+                                </label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <label>
+                                <input type="radio" name="user_sex" id="optionsRadios2" value="1">
+                                女
+                                </label>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <!--爱好-->
+                    <div class="form-group">
+                        <label for="like" class="col-sm-2 control-label">喜欢类型(多选)</label>
+                        <div class="col-sm-7">
+                            <select class="form-control" multiple data-placeholder="选择选项" id="like">
+                                <option selected>玄幻·奇幻</option>
+                                <option>武侠·仙侠</option>
+                                <option>游戏·竞技</option>
+                                <option>二次元</option>
+                                <option>言情</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!--注册-->
+                    
+                    <div class="form-group login">
+                        <div class="col-sm-12">
+                            <button class="btn button" type="button">
+                                <span class="submit">注册</span>
+                                <span class="loading"><i class="fa fa-refresh"></i></span>
+                                <span class="check"><i class="fa fa-check"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>

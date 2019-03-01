@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="cn.black.book.dao.UserDao">  
+	<!-- 查找用户 -->
+	<select id="findUser" resultType="cn.black.book.entity.User" >
+		select * from user
+	</select>
+	
+	<!-- 通过type类型来查找读者 -->
+	<select id="findByUserId" parameterType="java.lang.Integer" resultType="cn.black.book.entity.User" >
+		select * from user where user_type=#{user_type}
+	</select>
+	
+	<!-- 查询书类型数据 -->
+	<select id="findGROUPBYUser" resultMap="BaseResultMap" >
+		SELECT user_type,Count(*) as count FROM user GROUP BY user_type
+	</select>
+	<resultMap id="BaseResultMap" type="Map">
+       <result property="user_type" column="user_type"/>
+       <result property="count" column="count"/>
+    </resultMap>
+	
+	<!-- 通过分类来查找读者 -->
+	<select id="findByUsersId" parameterType="java.lang.Integer" resultType="cn.black.book.entity.User" >
+		select * from user where user_type=#{user_type} limit #{start},#{end}
+	</select>
+	
+	<!-- 通过ID找读者 -->
+	<select id="loginUserById" parameterType="java.lang.Integer" resultType="cn.black.book.entity.User" >
+		select * from user where user_id=#{user_id}
+	</select>
+	
+	<!-- 用户登录 -->
+	<select id="loginUserByPhone" parameterType="java.lang.String" resultType="cn.black.book.entity.User" >
+		select * from user where user_phone=#{user_phone} and user_password=#{user_password}
+	</select>
+	
+	<select id="loginUserByEmail" parameterType="java.lang.String" resultType="cn.black.book.entity.User" >
+		select * from user where user_email=#{user_email} and user_password=#{user_password}
+	</select>
+	
+	<select id="loginUserByAccount" parameterType="java.lang.String" resultType="cn.black.book.entity.User" >
+		select * from user where user_account=#{user_account} and user_password=#{user_password}
+	</select>
+	
+	<!-- 通过ID来删除用户 -->
+	<delete id="removeUser" parameterType="java.lang.Integer">
+	    DELETE FROM user WHERE user_id=#{user_id}
+	</delete>
+	
+	<!-- 更新用户信息 -->
+	<update id="updateUser" parameterType="cn.black.book.entity.User">
+		update user set 
+			user_phone=#{user_phone},
+			user_name=#{user_name},
+			user_account=#{user_account},
+			user_sex=#{user_sex},
+			user_email=#{user_email},
+			user_type=#{user_type},
+			user_Introduce=#{user_Introduce},
+			user_city=#{user_city},
+			user_like=#{user_like}
+			where user_id=#{user_id}
+	</update>
+	
+	<!-- 更新用户头像 -->
+	<update id="updateUserimg" parameterType="cn.black.book.entity.User">
+		update user set 
+			user_img=#{user_img}
+			where user_id=#{user_id}
+	</update>
+	<!-- 收藏书 -->
+	<update id="collectionBooks" parameterType="cn.black.book.entity.User">
+		update user set 
+			user_collection=#{user_collection} where user_id=#{user_id}
+	</update>
+	
+	<!-- 注册用户 -->
+	<insert id="registerUser" parameterType="cn.black.book.entity.User">
+		insert into user(user_phone,user_name,user_account,user_sex,user_password,user_email,user_type,user_city,user_like) values(#{user_phone},#{user_name},#{user_account},#{user_sex},#{user_password},#{user_email},#{user_type},#{user_city},#{user_like})
+	</insert>
+</mapper>  

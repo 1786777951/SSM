@@ -1,0 +1,88 @@
+/*      placeholder        */
+input::-webkit-input-placeholder {font-size: 15px; color: white!important;}
+input:focus::-webkit-input-placeholder {font-size: 12px;color: red!important;}
+/* Firefox < 19 */
+input:-moz-placeholder {font-size: 15px;color: white!important;}
+input:focus:-moz-placeholder {font-size: 12px;color: red!important;}
+/* Firefox > 19 */
+input::-moz-placeholder {font-size: 15px;color: white!important;}
+input:focus::-moz-placeholder {font-size: 12px;color: red!important;}
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {font-size: 15px;color: white!important;}
+input:focus:-ms-input-placeholder {font-size: 12px;color: red!important;}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image:url("../../images/header/register.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+    background-color: #CCCCCC;
+}
+/* 表单 */
+#main form{
+    padding: 50px;
+    margin:50px auto;
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 返回首页 */
+#main form .back{
+    font-size: 18px;
+    color: white;
+}
+
+/* 欢迎加入 */
+#main form .wecome{
+   padding: 20px 0px;
+}
+#main form .wecome h2{
+    width: 100%;
+    margin: 0px;
+    padding: 5px 0px;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+}
+
+#main form .form-group input{
+    border-top: none!important;
+    border-left: none!important;
+    border-right: none!important;
+    box-shadow: none!important;
+    background-color: rgba(0,0,0,0)!important;
+    border-radius: 0px!important;
+    color: white;
+    font-size: 18px;
+}
+#main form .form-group label{
+    color: black;
+    font-size: 18px;
+}
+/* 提示 */
+#main form .form-group .tips{
+    font-size: 13px;
+    text-shadow: none;
+    font-weight: normal;
+    padding: 5px;
+    margin: 0px;
+}
+/* 多选框 */
+.container-fluid #main form .form-group .selectMultiple{
+    width: 100%;
+    margin-top:0px;
+}
+
+
+/* 登陆 */
+#main form .login{
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    padding: 20px 0px 10px 0px;
+}
